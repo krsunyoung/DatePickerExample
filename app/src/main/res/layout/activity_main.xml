@@ -10,13 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.bit2016.datepickerexample.MainActivity">
 
-    <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:calendarViewShown="false"
-        android:datePickerMode="spinner" />
+    <!-- 이렇게 하면 달력 캘린더를 볼수 있지만 문제점이 있다.
+    날짜를 표시할수 있게끔 textview를 해준다.
+    android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        !!!!!!!!!!!!!!!!!           getRusult 참고        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+       -->
+
 
     <Button
         android:id="@+id/button"
@@ -34,5 +34,15 @@
         android:layout_below="@+id/button"
         android:layout_alignParentStart="true"
         android:layout_marginTop="17dp" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
